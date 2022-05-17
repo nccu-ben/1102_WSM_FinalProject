@@ -1,0 +1,18 @@
+
+# ignore dressipi_recsys2022 dataset
+./dressipi_recsys2022
+candidate_items.csv
+item_features.csv
+test_final_sessions.csv
+test_leaderboard_sessions.csv
+train_purchases.csv
+train_sessions.csv
+README.txt
+README_win.txt
+
+
+
+
+
+
+
