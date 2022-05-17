@@ -2,14 +2,16 @@
 
 ## VSM and LM
 
-### install and usage
+### Install and Usage
 
 1. you'll need to download dressipi_recsys2022 dataset, and put it into "VSM and LM" folder.
 2. you'll need to run generators as following order.
 
+### Results
 
 
 ## Machine Learning
 
-### install and usage
- 
+### Install and Usage
+
+### Results
