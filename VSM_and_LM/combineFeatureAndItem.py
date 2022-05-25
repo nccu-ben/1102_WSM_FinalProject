@@ -1,3 +1,5 @@
+###資料型態:(s t i (cvcvcv) i (cvcvcv)...)
+
 import csv
 
 with open('./dressipi_recsys2022/train_sessions.csv', newline='') as csvfile:
