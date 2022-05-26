@@ -1,5 +1,6 @@
 import csv
-
+from time import sleep
+from tqdm import tqdm, trange
 
 with open('./dressipi_recsys2022/test_leaderboard_sessions.csv', newline='') as csvfile:
 
@@ -10,7 +11,7 @@ with open('./dressipi_recsys2022/test_leaderboard_sessions.csv', newline='') as 
     path = ""
     print("---------------starting generate----------------")
 
-    for i in sessionDocuments:
+    for i in tqdm(sessionDocuments):
         if i[0] != nowSessionId:
             nowSessionId = i[0]
             if path != "":

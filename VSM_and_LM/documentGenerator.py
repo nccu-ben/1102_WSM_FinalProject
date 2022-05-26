@@ -4,7 +4,7 @@ from tqdm import tqdm, trange
 
 file = open('./combineFeatureAndItem.csv','r')
     
-for line in file.readlines():
+for line in tqdm(file.readlines()):
     line = line.replace("," , " ")
     sessionId = list(line.split())[0]
 
