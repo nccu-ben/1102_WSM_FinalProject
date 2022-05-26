@@ -1,26 +1,15 @@
 import csv
+from time import sleep
+from tqdm import tqdm, trange
 
-with open('./dressipi_recsys2022/train_sessions.csv', newline='') as csvfile:
-
-    sessionDocuments = list(csv.reader(csvfile))
-    sessionDocuments = sessionDocuments[1:]
+file = open('./combineFeatureAndItem.csv','r')
     
-    nowSessionId = -1
-    path = ""
-    print("---------------starting generate----------------")
+for line in file.readlines():
+    line = line.replace("," , " ")
+    sessionId = list(line.split())[0]
 
-    for i in sessionDocuments:
-        if i[0] != nowSessionId:
-            nowSessionId = i[0]
-            if path != "":
-                f.close()
+    path = './documents/' + sessionId + '.txt'
+    targetFile = open(path, 'w')
+    targetFile.write(line)
+    targetFile.close()
 
-            path = './documents/' + i[0] + '.txt'
-            f = open(path, 'w')
-        
-        f.write(i[1])
-        f.write(" ")
-        f.write(i[2][0:7])
-        f.write(" ")
-
-    print("----------------ending generate-----------------")
