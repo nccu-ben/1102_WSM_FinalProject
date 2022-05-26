@@ -1,6 +1,6 @@
 
 # ignore dressipi_recsys2022 dataset
-./dressipi_recsys2022
+dressipi_recsys2022
 candidate_items.csv
 item_features.csv
 test_final_sessions.csv
@@ -9,12 +9,12 @@ train_purchases.csv
 train_sessions.csv
 README.txt
 README_win.txt
-
+output.csv
 # for mac
 .DS_Store
 
 # documents
 documents
-
+qieries
 
 
