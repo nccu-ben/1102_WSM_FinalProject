@@ -1,9 +1,5 @@
 import csv
 
-# with open('./dressipi_recsys2022/train_sessions.csv', newline='') as csvfile:
-#     sessionDocuments = list(csv.reader(csvfile))
-#     sessionDocuments = sessionDocuments[2:]
-
 with open('./dressipi_recsys2022/item_features.csv', newline='') as csvfile2:
     features = list(csv.reader(csvfile2))
     features = features[1:]
@@ -35,8 +31,6 @@ item_feature_end[features[len(features)-1][0]]=len(features)-1     #最後一個
 vector_line=[]
 vectors=[]
 for i in range(0,len(features)):
-    # for j in range(item_feature_start[features[i][0]],item_feature_end[features[i][0]]+1): 
-    # vector_line.append(features[i][0])
     for k in range(0,len(allcombination)):  
         if(features[i][1]==allcombination[k][0] and features[i][2]==allcombination[k][1]):
             vector_line.append(1)
@@ -50,7 +44,6 @@ finalvector=dict()
 finalvector_line=[]
 ii=0    #這個變數會在features跳著走 會跳過同樣的itemID 才不會重複計算到
 for k in range(0,len(item_feature_start)):
-    # finalvector_line.append(features[i][0])
     for j in range(item_feature_start[features[ii][0]],item_feature_end[features[ii][0]]+1): 
         if(j == item_feature_start[features[ii][0]]):
             finalvector_line=vectors[j]
