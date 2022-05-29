@@ -18,8 +18,7 @@ with open('./dressipi_recsys2022/test_leaderboard_sessions.csv', newline='') as 
 
             path = './queries/' + nowSessionId + '.txt'
             f = open(path, 'w')
-        
-        f.write(i[1])
-        f.write(" ")
-        f.write(i[2][0:7])
-        f.write(" ")
+       
+        itemId = i[1] 
+        date   = i[2][0:7]
+        f.write( itemId + " " + date + " ")
