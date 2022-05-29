@@ -9,7 +9,6 @@ with open('./dressipi_recsys2022/test_leaderboard_sessions.csv', newline='') as 
     
     nowSessionId = -1
     path = ""
-    print("---------------starting generate----------------")
 
     for i in tqdm(sessionDocuments):
         if i[0] != nowSessionId:
@@ -17,12 +16,10 @@ with open('./dressipi_recsys2022/test_leaderboard_sessions.csv', newline='') as 
             if path != "":
                 f.close()
 
-            path = './queries/' + i[0] + '.txt'
+            path = './queries/' + nowSessionId + '.txt'
             f = open(path, 'w')
         
         f.write(i[1])
         f.write(" ")
         f.write(i[2][0:7])
         f.write(" ")
-
-    print("----------------ending generate-----------------")
